@@ -1,8 +1,7 @@
 <?php
-/*
-    ###### https://github.com/tazotodua/Send-SMS-magtifun.ge-gateway #####
-Usage: 
+/*  ###### https://github.com/tazotodua/Send-SMS-magtifun.ge-gateway #####
 
+Usage: 
     send_sms_magtifun("599xxxxxx", "my_password", "599yyyyyy", "Hello world");
 */
 
