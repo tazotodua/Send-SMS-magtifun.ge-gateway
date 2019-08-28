@@ -9,8 +9,6 @@ Usage:
 
 
 
-
-
 function send_sms_magtifun($username, $password, $recipient, $text)
 {
     $ch = curl_init();
