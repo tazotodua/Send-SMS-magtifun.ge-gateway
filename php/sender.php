@@ -2,10 +2,10 @@
 /*  ###### https://github.com/tazotodua/Send-SMS-magtifun.ge-gateway #####
 
 Usage: 
-    send_sms_magtifun("599xxxxxx", "my_password", "599yyyyyy", "Hello world");
+    send_sms_magtifun($username="599xxxxxx", $password="my_password", $recipient="599yyyyyy", $text="Hello world");
 */
 
-function send_sms_magtifun($username, $password, $to, $text)
+function send_sms_magtifun($username, $password, $recipient, $text)
 {
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_USERAGENT,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/32.0.1700.107 Chrome/32.0.1700.107 Safari/537.36");
@@ -42,7 +42,7 @@ function send_sms_magtifun($username, $password, $to, $text)
         curl_setopt($ch, CURLOPT_REFERER, $send_form_page);
         preg_match('/\"csrf_token\"(.*?)value\=\"(.*?)\"/si',$answer,$nc);	$token=$nc[2];
         curl_setopt($ch, CURLOPT_URL, "http://www.magtifun.ge/scripts/sms_send.php");
-        curl_setopt($ch, CURLOPT_POSTFIELDS, "csrf_token=".$token."&message_unicode=0&messages_count=1&recipient=".$to."&recipients=".$to."&total_recipients=1&message_body=".$text);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, "csrf_token=".$token."&message_unicode=0&messages_count=1&recipient=".$recipient."&recipients=".$recipient."&total_recipients=1&message_body=".$text);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         $answer = curl_exec($ch);			if (curl_error($ch)) {	echo "f_CURL_ERROR:".curl_error($ch)."</br>";	}
 
