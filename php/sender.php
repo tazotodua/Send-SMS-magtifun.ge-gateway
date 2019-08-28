@@ -5,6 +5,12 @@ Usage:
     send_sms_magtifun($username="599xxxxxx", $password="my_password", $recipient="599yyyyyy", $text="Hello world");
 */
 
+
+
+
+
+
+
 function send_sms_magtifun($username, $password, $recipient, $text)
 {
     $ch = curl_init();
