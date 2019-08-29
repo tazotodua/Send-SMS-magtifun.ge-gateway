@@ -2,7 +2,7 @@
 /*  ###### https://github.com/tazotodua/Send-SMS-magtifun.ge-gateway #####
 
 Usage: 
-    send_sms_magtifun($username="599xxxxxx", $password="my_password", $recipient="599yyyyyy", $text="Hello world");
+    send_sms_magtifun($username="59xxxxxxx", $password="my_password", $recipient="59yyyyyyy", $text="Hello world");
 */
 
 
