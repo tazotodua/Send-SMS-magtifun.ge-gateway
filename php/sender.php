@@ -1,5 +1,5 @@
 <?php
-/* ###### https://github.com/tazotodua/Send-SMS-through-magtifun.ge #####
+/* ###### https://github.com/ttodua/Send-SMS-through-magtifun.ge #####
 * Usage :
 *    echo (new SmsSender_Magtifun($my_username="59xxxxxx", $my_password="xxx"))->send($recipient="59yyyyyy", $text="Hello");
 */
